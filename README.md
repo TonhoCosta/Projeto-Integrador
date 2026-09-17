@@ -12,8 +12,8 @@
 | Integrante | Área principal | Responsabilidades |
 |---|---|---|
 | João Lucas da Silva Araújo | Piloto e calibração | Testes de dirigibilidade, calibração e operação |
-| Nome 2 | Mecânica | Chassi, direção, transmissão e montagem |
-| Nome 3 | Projeto e documentação | Arquitetura, desenhos, organização da documentação |
+| Thyery Hanry Soares Oliveira / Juan Riquelmeda Silva Nascimento | Mecânica | Chassi, direção, transmissão e montagem |
+| Jenyfer Rayane da Silva | Projeto e documentação | Arquitetura, desenhos, organização da documentação |
 | Antonio Virgílio Costa | Eletrônica e integração elétrica | Alimentação, drivers, motores, sensores e conexões |
 | Felipe Abreu de Almeida | Software e controle | Comunicação, controle, sensores e automação |
 
