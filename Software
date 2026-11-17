@@ -1,1 +1,112 @@
+#include <ESP32Servo.h> 
+#include "BluetoothSerial.h"
 
+Servo meuServo;  
+BluetoothSerial SerialBT;
+
+// Pinos
+const int pinoServo = 15;
+const int IN1 = 25; 
+const int IN2 = 33; 
+const int ENA = 32; 
+const int IN3 = 23; 
+const int IN4 = 22; 
+const int ENB = 21; 
+
+// Variáveis globais de controle de estado
+int angulo = 90;
+int velocidade = 0;
+
+void monitoraBluetooth(esp_spp_cb_event_t event, esp_spp_cb_param_t *param) {
+  if (event == ESP_SPP_SRV_OPEN_EVT) {
+    Serial.println("\n[SUCESSO] Conectado!");
+  }
+  if (event == ESP_SPP_CLOSE_EVT) {
+    Serial.println("\n[AVISO] Desconectado.");
+  }
+}
+
+void setup() {
+  Serial.begin(9600);
+  SerialBT.begin("Carro_Aura");
+  SerialBT.register_callback(monitoraBluetooth);
+  
+  ESP32PWM::allocateTimer(0);
+  meuServo.setPeriodHertz(50);    
+  meuServo.attach(pinoServo, 500, 2400); 
+  meuServo.write(angulo);
+  
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+  pinMode(ENA, OUTPUT); // Configuração que faltava
+  pinMode(ENB, OUTPUT); // Configuração que faltava
+}
+
+// Move os motores instantaneamente sem travar o código
+void motores(bool in1, bool in2, bool in3, bool in4, int v) {
+  digitalWrite(IN1, in1);
+  digitalWrite(IN2, in2);
+  digitalWrite(IN3, in3);
+  digitalWrite(IN4, in4);
+  analogWrite(ENA, v);
+  analogWrite(ENB, v);
+}
+
+void loop() {
+  if (SerialBT.available() > 0) {
+    char tecla = SerialBT.read();
+    if (tecla == '\n' || tecla == '\r') return;
+
+    switch(tecla){
+      case 'F': // Frente total
+        motores(LOW, HIGH, HIGH, LOW, 255);
+        break;
+        
+      case 'B': // Trás total
+        motores(HIGH, LOW, LOW, HIGH, 255);
+        break;
+        
+      case 'L': // Virar Esquerda
+        angulo = 30;
+        meuServo.write(angulo);
+        break;
+        
+      case 'R': // Virar Direita
+        angulo = 150;
+        meuServo.write(angulo);
+        break;
+        
+      case 'G': // Frente + Esquerda
+        motores(LOW, HIGH, HIGH, LOW, 255);
+        angulo = 30;
+        meuServo.write(angulo);
+        break;
+        
+      case 'H': // Frente + Direita
+        motores(LOW, HIGH, HIGH, LOW, 255);
+        angulo = 150;
+        meuServo.write(angulo);
+        break;
+        
+      case 'I': // Trás + Esquerda
+        motores(HIGH, LOW, LOW, HIGH, 255);
+        angulo = 30;
+        meuServo.write(angulo);
+        break;
+        
+      case 'J': // Trás + Direita
+        motores(HIGH, LOW, LOW, HIGH, 255);
+        angulo = 150;
+        meuServo.write(angulo);
+        break;
+        
+      case 'S': // Parar tudo e centralizar volante
+        motores(LOW, LOW, LOW, LOW, 0);
+        angulo = 90;
+        meuServo.write(angulo);
+        break;
+    }
+  } 
+}
