@@ -57,16 +57,15 @@ Este arquivo deve registrar, de forma objetiva, o andamento semanal do projeto. 
 
 ## Planejado
 
-- ____________________
-- ____________________
-- ____________________
+- Ter a estrutura definida com as posições de cada componente
+- Peças prontas para a montagem na semana seguinte
 
 ## Concluído
 
-- ____________________
-- ____________________
+- Estrutura finalizada
+- Peças prontas
 
-## Não concluído
+## Não Concluído
 
 - ____________________
 
@@ -86,8 +85,8 @@ Este arquivo deve registrar, de forma objetiva, o andamento semanal do projeto. 
 
 ## Próximas ações
 
-- ____________________
-- ____________________
+- Montar o carrinho
+- Iniciar desenvolvimento do código e ligações eletrônicas
 
 ---
 
@@ -95,11 +94,11 @@ Este arquivo deve registrar, de forma objetiva, o andamento semanal do projeto. 
 
 ## Planejado
 
-- ____________________
+- Montar o carrinho para receber as ligações eletrônicas nos componentes
 
 ## Concluído
 
-- ____________________
+- Carrinho montado e ligações eletrônicas básicas feitas
 
 ## Não concluído
 
@@ -116,12 +115,12 @@ Este arquivo deve registrar, de forma objetiva, o andamento semanal do projeto. 
 ## Testes realizados
 
 | Teste | Resultado |
-|---|---|
+| Verificar movimento das rodas| Rodas funcionando normalmente, porém em velocidades um pouco diferentes uma da outra|
 | ____________________ | ____________________ |
 
 ## Próximas ações
 
-- ____________________
+- Finalizar código completo, ajustar giro das rodas
 
 ---
 
@@ -129,11 +128,11 @@ Este arquivo deve registrar, de forma objetiva, o andamento semanal do projeto. 
 
 ## Planejado
 
-- ____________________
+- Finalizar código de controle pelo celular via bluetooth e terminar ligações eletrônicas
 
 ## Concluído
 
-- ____________________
+- Código e ligações concluídos
 
 ## Não concluído
 
@@ -169,7 +168,7 @@ Este arquivo deve registrar, de forma objetiva, o andamento semanal do projeto. 
 
 ## Concluído
 
-- ____________________
+- Demonstração feita e aprovada por Tiago
 
 ## Não concluído
 
@@ -185,13 +184,13 @@ Este arquivo deve registrar, de forma objetiva, o andamento semanal do projeto. 
 
 ## Demonstração preparada para a AP1
 
-Descrever qual subsistema ou conjunto de subsistemas será demonstrado na bancada.
+Carrinho controlado por Bluetooth
 
 ## Situação geral na AP1
 
 ### Entregas concluídas
 
-- ____________________
+- Carrinho funcional controlado por Bluetooth
 
 ### Entregas parcialmente concluídas
 
@@ -215,12 +214,12 @@ Descrever qual subsistema ou conjunto de subsistemas será demonstrado na bancad
 
 Copiar o bloco abaixo sempre que uma nova semana for iniciada.
 
-```markdown
-# Semana X — DD/MM/AAAA a DD/MM/AAAA
+```
+# Semana 6 — 21/10/2026 a 27/10/2026
 
 ## Planejado
 
-- ...
+- Nada
 
 ## Concluído
 
@@ -248,3 +247,98 @@ Copiar o bloco abaixo sempre que uma nova semana for iniciada.
 
 - ...
 ```
+# Semana 7 — 28/10/2026 a 03/11/2026
+
+## Planejado
+
+- Nada
+
+## Concluído
+
+- ...
+
+## Não concluído
+
+- ...
+
+## Problemas ou impedimentos
+
+- ...
+
+## Decisões técnicas da semana
+
+- ...
+
+## Testes realizados
+
+| Teste | Resultado |
+|---|---|
+| ... | ... |
+
+## Próximas ações
+
+- ...
+
+# Semana 8 — 04/11/2026 a 10/11/2026
+
+## Planejado
+
+- Nada
+
+## Concluído
+
+- ...
+
+## Não concluído
+
+- ...
+
+## Problemas ou impedimentos
+
+- ...
+
+## Decisões técnicas da semana
+
+- ...
+
+## Testes realizados
+
+| Teste | Resultado |
+|---|---|
+| ... | ... |
+
+## Próximas ações
+
+- ...
+
+# Semana 9 — 11/11/2026 a 17/11/2026
+
+## Planejado
+
+- Nada
+
+## Concluído
+
+- Adição de mais uma bateria em série, totalizando 12V, para aumentar a velocidade do carro
+
+## Não concluído
+
+- ...
+
+## Problemas ou impedimentos
+
+- ...
+
+## Decisões técnicas da semana
+
+- ...
+
+## Testes realizados
+
+| Teste | Resultado |
+|---|---|
+| ... | ... |
+
+## Próximas ações
+
+- ...
